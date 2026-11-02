@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nancy Mishra - Mehendi Artist and Computer Science Enthusiast">
+<title>Nancy Mishra | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#faf6f1; --card:#fff; --text:#3a2a22;
+  --muted:#786354; --primary:#8b3a2b;
+  --accent:#d4a017; --soft:#f3ebe3;
+}
+[data-theme="dark"] {
+  --bg:#0f172a; --card:#1e293b; --text:#f1f5f9;
+  --muted:#aab7c8; --primary:#38bdf8;
+  --accent:#a78bfa; --soft:#263449;
+}
+* {margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body {
+  font-family:Poppins,sans-serif;background:var(--bg);
+  color:var(--text);line-height:1.7;transition:.3s;
+}
+.container {width:90%;max-width:1050px;margin:auto}
+header {
+  position:sticky;top:0;z-index:10;
+  background:var(--card);border-bottom:1px solid var(--soft);
+}
+nav {
+  min-height:70px;display:flex;align-items:center;
+  justify-content:space-between;gap:15px;flex-wrap:wrap;
+}
+.logo {font:700 1.5rem 'Playfair Display';color:var(--primary)}
+nav ul {display:flex;gap:22px;list-style:none;flex-wrap:wrap}
+nav a {text-decoration:none;color:var(--text);font-size:.9rem}
+nav a:hover {color:var(--primary)}
+button,.btn {
+  border:0;border-radius:30px;padding:11px 20px;
+  background:var(--primary);color:white;
+  cursor:pointer;text-decoration:none;font:500 .9rem Poppins;
+}
+button:hover,.btn:hover {opacity:.85;transform:translateY(-2px)}
+section {padding:75px 0}
+.hero {min-height:85vh;display:flex;align-items:center}
+.hero-grid {
+  display:grid;grid-template-columns:1.3fr 1fr;
+  gap:40px;align-items:center;
+}
+h1,h2,h3 {font-family:'Playfair Display',serif}
+h1 {font-size:clamp(2.3rem,5vw,3.8rem);line-height:1.2}
+h1 span {color:var(--primary)}
+p {color:var(--muted);margin:12px 0 22px}
+.buttons {display:flex;gap:12px;flex-wrap:wrap}
+.outline {background:transparent;color:var(--primary);border:1px solid var(--primary)}
+.portrait {
+  background:var(--card);border:2px solid var(--accent);
+  border-radius:25px;padding:40px 15px;text-align:center;
+  box-shadow:0 12px 35px #00000012;
+}
+.avatar {
+  width:145px;height:145px;border-radius:50%;
+  margin:0 auto 20px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--accent));
+  color:white;font-size:3rem;font-weight:600;
+}
+.heading {text-align:center;margin-bottom:38px}
+.heading h2 {font-size:2.3rem}
+.grid {
+  display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.card {
+  background:var(--card);padding:25px;border-radius:18px;
+  border:1px solid var(--soft);transition:.3s;
+}
+.card:hover {transform:translateY(-6px)}
+.card h3 {margin:10px 0;color:var(--primary)}
+.icon {font-size:2rem}
+.soft {background:var(--soft)}
+.tags {display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}
+.tag {
+  background:var(--soft);color:var(--primary);
+  padding:5px 12px;border-radius:20px;font-size:.8rem;
+}
+.contact {text-align:center;max-width:650px;margin:auto}
+.socials {display:flex;justify-content:center;gap:15px;flex-wrap:wrap}
+.socials a {
+  background:var(--soft);color:var(--primary);
+  padding:12px 17px;border-radius:12px;text-decoration:none;
+}
+footer {
+  padding:25px;text-align:center;border-top:1px solid var(--soft);
+  color:var(--muted);font-size:.85rem;
+}
+@media(max-width:700px) {
+  nav {justify-content:center;padding:12px 0}
+  nav ul {justify-content:center;gap:15px}
+  .hero-grid {grid-template-columns:1fr;text-align:center}
+  .buttons {justify-content:center}
+  .portrait {max-width:350px;margin:auto}
+  section {padding:55px 0}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">Nancy Mishra.</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button id="themeBtn" aria-label="Change theme">🌙 Theme</button>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <h1>Hello, I'm Nancy Mishra<br><span>Mehendi Artist</span> & CS Enthusiast</h1>
+      <p>Blending traditional art with modern technology.</p>
+      <p>
+        A passionate fresher interested in Mehendi art,
+        programming and exploring the exciting world of
+        Machine Learning and Deep Learning.
+      </p>
+      <div class="buttons">
+        <a href="#projects" class="btn">Explore My Work</a>
+        <a href="#contact" class="btn outline">Contact Me</a>
+      </div>
+    </div>
+
+    <div class="portrait">
+      <div class="avatar">NM</div>
+      <h2>Nancy Mishra</h2>
+      <p>Mehendi • C • C++ • Deep Learning</p>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="heading">
+      <h2>About Me</h2>
+      <p>Where creativity meets technology.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Who I Am</h3>
+        <p>
+          I am Nancy Mishra, a fresher passionate about
+          Mehendi designing and Computer Science.
+          I enjoy combining creativity with logical thinking.
+        </p>
+      </div>
+      <div class="card">
+        <h3>My Journey</h3>
+        <p>
+          Currently building my programming foundation
+          with C and C++ while exploring Machine Learning
+          and modern technologies.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="soft">
+  <div class="container">
+    <div class="heading">
+      <h2>My Skills</h2>
+      <p>Things I love learning and creating.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🎨</div>
+        <h3>Mehendi Art</h3>
+        <p>Traditional, bridal and modern henna designs.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💻</div>
+        <h3>C Programming</h3>
+        <p>Programming fundamentals and logical thinking.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⚙️</div>
+        <h3>C++</h3>
+        <p>Object-oriented programming and problem solving.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🧠</div>
+        <h3>Deep Learning</h3>
+        <p>Exploring neural networks and AI concepts.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="container">
+    <div class="heading">
+      <h2>My Projects</h2>
+      <p>My journey into the world of development.</p>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <div class="icon">🌸</div>
+        <h3>Personal Portfolio</h3>
+        <p>A personal website showcasing my skills,
+        interests and projects.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="icon">🧮</div>
+        <h3>Coming Soon</h3>
+        <p>More programming and Machine Learning
+        projects coming soon.</p>
+        <div class="tags">
+          <span class="tag">C</span>
+          <span class="tag">C++</span>
+          <span class="tag">AI</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="soft">
+  <div class="container">
+    <div class="contact">
+      <div class="heading">
+        <h2>Let's Connect</h2>
+        <p>
+          Interested in Mehendi designs, technology
+          or collaboration? Feel free to connect!
+        </p>
+      </div>
+
+      <div class="socials">
+        <a href="mailto:nancy.mishra@example.com">✉ Email</a>
+        <a href="#" target="_blank" rel="noopener">🔗 LinkedIn</a>
+        <a href="#" target="_blank" rel="noopener">🐙 GitHub</a>
+        <a href="#" target="_blank" rel="noopener">📷 Instagram</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Designed & Built with ❤️ by Nancy Mishra</p>
+  <p>© 2026 All Rights Reserved.</p>
+</footer>
+
+<script>
+const btn = document.getElementById("themeBtn");
+const root = document.documentElement;
+
+let theme = localStorage.getItem("theme") || "light";
+
+function applyTheme() {
+  if (theme === "dark") {
+    root.setAttribute("data-theme", "dark");
+    btn.textContent = "☀️ Theme";
+  } else {
+    root.removeAttribute("data-theme");
+    btn.textContent = "🌙 Theme";
+  }
+}
+
+applyTheme();
+
+btn.addEventListener("click", () => {
+  theme = theme === "light" ? "dark" : "light";
+  localStorage.setItem("theme", theme);
+  applyTheme();
+});
+</script>
+
+</body>
+</html>
